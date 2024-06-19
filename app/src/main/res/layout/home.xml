@@ -206,61 +206,62 @@
         android:layout_height="wrap_content"
         android:src="@drawable/Card3" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/rouded"
-        android:orientation="vertical">
+        android:layout_marginEnd="15dp">
 
-        <TextView
-            android:id="@+id/textView22"
+        <!-- Plano de fundo arredondado -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Quinta-Feira, 02" />
+            android:layout_height="match_parent"
+            android:background="@drawable/rouded"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textViewSpotify"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textView22"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:text="Spotify" />
+            <!-- LinearLayout para organizar os textos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="94dp"
-            android:layout_height="wrap_content"
-            android:text="11h47" />
+                <!-- Texto "Quinta-Feira, 02" -->
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quinta-Feira, 02"
+                    android:layout_margin="8dp"/>
 
-        <TextView
-            android:id="@+id/textViewAcademia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textViewSpotify"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
-            android:text="Academia" />
+                <!-- Texto "Spotify" -->
+                <TextView
+                    android:id="@+id/textViewSpotify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spotify"
+                    android:layout_margin="8dp"/>
 
-        <TextView
-            android:id="@+id/textView22"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Quarta-Feira, 01" />
-    </LinearLayout>
+                <!-- Texto "11h47" -->
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11h47"
+                    android:layout_margin="8dp"/>
 
-    <TextView
-        android:id="@+id/textViewHorario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView22"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Horário" />
+                <!-- Texto "Academia" -->
+                <TextView
+                    android:id="@+id/textViewAcademia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Academia"
+                    android:layout_margin="8dp"/>
 
-</LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
