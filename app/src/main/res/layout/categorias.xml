@@ -6,25 +6,17 @@
     android:layout_height="match_parent"
     android:background="#2196F3">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="51dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/abc_vector_test"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="413dp"
         android:layout_height="513dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rouded"
         android:contentDescription="Voltar"
         android:foregroundTint="#F3E9E9"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="-1dp"
-        android:background="@drawable/rouded"
-        tools:layout_editor_absoluteY="244dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -40,44 +32,148 @@
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp"> <!-- Centraliza o conteúdo dentro do LinearLayout -->
 
-                <FrameLayout
-                    android:layout_width="411dp"
-                    android:layout_height="511dp"
-                    tools:layout_editor_absoluteX="1dp"
-                    tools:layout_editor_absoluteY="1dp">
+                <!-- Primeiro retângulo -->
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/light_blue_border"
+                    android:orientation="vertical"> <!-- Centraliza horizontalmente cada retângulo -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="Nome"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+                </LinearLayout>
 
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"></LinearLayout>
-                    </FrameLayout>
-                </FrameLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>>
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    tools:layout_editor_absoluteX="12dp"
-                    tools:layout_editor_absoluteY="13dp"/>
+                <!-- Segundo retângulo -->
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/light_blue_border"
+                    android:orientation="vertical"> <!-- Centraliza horizontalmente cada retângulo -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="Descrição"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <!-- Terceiro retângulo -->
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/light_blue_border"
+                    android:orientation="vertical"> <!-- Centraliza horizontalmente cada retângulo -->
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="Orçamento"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <!-- Quarto retângulo -->
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/light_blue_border"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp"> <!-- Adiciona padding para espaçamento interno -->
+
+                    <!-- Texto "Cor" no canto superior esquerdo -->
+
+                    <!-- Layout para os círculos -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="Cor"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:orientation="horizontal">
+
+                        <!-- Círculo Vermelho -->
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circle_red" />
+
+                        <!-- Círculo Verde -->
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circle_green" />
+
+                        <!-- Círculo Azul -->
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circle_blue" />
+
+                        <!-- Círculo Amarelo -->
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circle_yellow" />
+
+                        <!-- Círculo Roxo -->
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circle_purple" />
+
+                        <!-- Círculo Laranja -->
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circle_orange" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
 
         </RelativeLayout>
-
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="#FF0000"
-            android:layout_marginStart="160dp"
-            android:layout_marginTop="95dp"
-            android:text="-R$11,90" />
 
     </LinearLayout>
 
@@ -85,13 +181,13 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="137dp"
         android:layout_marginTop="24dp"
         android:text="Categoria"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -104,7 +200,7 @@
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textView13"
